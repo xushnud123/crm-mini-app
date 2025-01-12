@@ -9,9 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.10.0",
+    "classnames": "^2.5.1",
+    "next": "14.2.23",
+    "next-query-params": "^5.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.23"
+    "react-hook-form": "^7.54.2",
+    "react-toastify": "^11.0.2",
+    "tailwind-merge": "^2.6.0",
+    "use-query-params": "^2.2.1",
+    "uuid": "^11.0.5",
+    "yup": "^1.6.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "typescript": "^5",
