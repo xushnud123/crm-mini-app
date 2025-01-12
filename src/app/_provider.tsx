@@ -4,7 +4,6 @@ import { MainLayout } from "./_components";
 import Sidebar from "./_sidebar/sidebar";
 import NextAdapterApp from "next-query-params/app";
 import { QueryParamProvider } from "use-query-params";
-import { ToastContainer } from "react-toastify";
 
 interface ProviderProps {
   children: React.ReactNode;

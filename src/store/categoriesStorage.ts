@@ -17,7 +17,7 @@ export interface CategoriesStorage {
 
 export const useCategoriesStorage = create<CategoriesStorage>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       categories: [
         // {
         //   categoryId: "1",

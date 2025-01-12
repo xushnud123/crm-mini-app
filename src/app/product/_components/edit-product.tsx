@@ -5,12 +5,13 @@ import { Product, ProductsStorage } from "@/store/productsStorage";
 import { FC, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { InferType } from "yup";
-import { updateProductSchema } from "./schem";
+import { updateProductSchema } from "./schema";
 import { CategoriesStorage } from "@/store/categoriesStorage";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { resizeImage } from "@/lib/calculate";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 interface EditProductProps
   extends Pick<ProductsStorage, "editProduct">,
@@ -164,13 +165,13 @@ const EditProduct: FC<EditProductProps> = ({
                   type="file"
                   {...register("photo")}
                   accept="image/jpeg,image/png,image/gif"
-                  style={{ display: "none" }} // inputni yashirish
+                  style={{ display: "none" }}
                 />
               </div>
               {imgUrl && (
                 <div className="mt-2">
                   <p>Preview: {product?.photo.name}</p>
-                  <img
+                  <Image
                     src={typeof imgUrl === "string" ? imgUrl : ""}
                     alt="Preview"
                     style={{

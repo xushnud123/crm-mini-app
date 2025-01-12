@@ -2,7 +2,7 @@
 import { RightModal } from "@/app/_components";
 import cn from "@/lib/cn";
 import { Categories, CategoriesStorage } from "@/store/categoriesStorage";
-import { Dispatch, FC, SetStateAction, useState } from "react";
+import { FC, useState } from "react";
 import { toast } from "react-toastify";
 
 interface CreateCategoriesProps

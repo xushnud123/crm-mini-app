@@ -9,7 +9,7 @@ export const addProductSchema = Yup.object({
     .max(200),
   photo: Yup.mixed()
     .test("fileSize", "File size must be less than 10MB", (value: any) => {
-      return value && value[0]?.size <= 10 * 1024 * 1024; // 2MB
+      return value && value[0]?.size <= 10 * 1024 * 1024;
     })
     .test(
       "fileType",

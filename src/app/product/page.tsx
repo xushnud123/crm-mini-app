@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { useState } from "react";
 import List from "./_components/list";
 import { Product, useProductsStorage } from "@/store/productsStorage";
 import CreateProduct from "./_components/add-product";
@@ -8,9 +8,7 @@ import { useCategoriesStorage } from "@/store/categoriesStorage";
 import EditProduct from "./_components/edit-product";
 import { ToastContainer } from "react-toastify";
 
-interface PageProps {}
-
-const Page: FC<PageProps> = ({}) => {
+const Page = ({}) => {
   const [allModal, setAllModal] = useState({
     createModal: false,
     editModal: false,

@@ -1,19 +1,18 @@
 "use client";
-import { FC, useState } from "react";
+import { useState } from "react";
 import CreateCategories from "./_components/create-categories";
 import List from "./_components/list";
 import EditCategories from "./_components/edit-categories";
 import { Categories, useCategoriesStorage } from "@/store/categoriesStorage";
 
-interface PageProps {}
-
-const Page: FC<PageProps> = ({}) => {
+const Page = ({}) => {
   const [allModal, setAllModal] = useState({
     createModal: false,
     editModal: false,
   });
   const [category, setCategory] = useState<Categories | null>(null);
-  const { categories, addCategory, editCategory ,removeCategory} = useCategoriesStorage();
+  const { categories, addCategory, editCategory, removeCategory } =
+    useCategoriesStorage();
 
   return (
     <>
@@ -45,7 +44,11 @@ const Page: FC<PageProps> = ({}) => {
             Создать категорию +
           </button>
         </div>
-        <List categories={categories} onCategory={setCategory}  removeCategory={removeCategory}/>
+        <List
+          categories={categories}
+          onCategory={setCategory}
+          removeCategory={removeCategory}
+        />
       </div>
     </>
   );

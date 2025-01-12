@@ -14,7 +14,6 @@ interface CreateCategoriesProps
 const CreateCategories: FC<CreateCategoriesProps> = ({
   open,
   setOpen,
-  categories,
   addCategory,
 }) => {
   const [name, setName] = useState("");

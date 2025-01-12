@@ -1,9 +1,6 @@
 import cn from "@/lib/cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FC } from "react";
-
-interface SidebarProps {}
 
 const menus = [
   {
@@ -24,7 +21,7 @@ const menus = [
   },
 ];
 
-const Sidebar: FC<SidebarProps> = ({}) => {
+const Sidebar = ({}) => {
   const pathname = usePathname();
   return (
     <div className="block px-4 border-r border-black h-screen overflow-y-auto">

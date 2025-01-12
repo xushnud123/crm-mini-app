@@ -22,7 +22,7 @@ export interface ProductsStorage {
 
 export const useProductsStorage = create<ProductsStorage>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       products: [] as Product[],
       addProduct: (props) =>
         set((state) => {

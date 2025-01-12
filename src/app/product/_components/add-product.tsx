@@ -5,12 +5,13 @@ import { ProductsStorage } from "@/store/productsStorage";
 import { FC, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { InferType } from "yup";
-import { addProductSchema } from "./schem";
+import { addProductSchema } from "./schema";
 import { CategoriesStorage } from "@/store/categoriesStorage";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { resizeImage } from "@/lib/calculate";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 interface CreateProductProps
   extends Pick<ProductsStorage, "addProduct">,
@@ -148,7 +149,7 @@ const CreateProduct: FC<CreateProductProps> = ({
               {imgUrl && (
                 <div>
                   <p>Preview:</p>
-                  <img
+                  <Image
                     src={typeof imgUrl === "string" ? imgUrl : ""}
                     alt="Preview"
                     style={{
