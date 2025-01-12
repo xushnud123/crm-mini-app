@@ -8,7 +8,6 @@ export default function Home() {
   const { products } = useProductsStorage();
   const { addToBasket, basketIds } = useBasketStorage();
 
-  console.log(basketIds);
   return (
     <div className="h-screen pt-4 pl-5 block">
       <ToastContainer autoClose={1000} />

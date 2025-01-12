@@ -57,7 +57,6 @@ const CreateProduct: FC<CreateProductProps> = ({
   }, [watch("photo")]);
 
   const onSubmit = async (e: any) => {
-    console.log(e);
     const product = {
       ...e,
       category: categories.filter(
